@@ -1,0 +1,22 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+## https://github.com/gulpjs/gulp/blob/master/.gitignore
+.DS_Store
+*.log
+node_modules
+bower_components
+build
+*.node
+components
+coverage
+*.orig
+.idea
+sandbox
+test/out-fixtures/*
+test/watch-*.txt
+gulp.1
+
+## CUSTOM
+dist
+resource
+

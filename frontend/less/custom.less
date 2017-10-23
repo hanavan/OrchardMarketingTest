@@ -1,0 +1,158 @@
+/*
+ * Custom Style LESS
+ */
+
+
+html, body {
+	height: 100%;
+	position: relative;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-body {
+	background-color: @color-black;
+	color: @color-white;
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.content-block {
+	margin-bottom: 100px;
+}
+
+.module-title {
+	h3 {
+		margin-top: 0;
+		margin-bottom: 40px;
+		padding-top: 22px;
+		padding-bottom: 28px;
+		font-size: 26px;
+		line-height: 34px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		.text-uppercase;
+		display: inline-block;
+		border-bottom: 1px solid @color-white;
+	}
+	&.no-margin-top {
+		h3 {
+			padding-top: 0;
+		}
+	}
+}
+
+.module-custom-grid {
+	@gap: @module-grid-gap/2;
+
+	.row {
+		margin-left: -@gap;
+		margin-right: -@gap;
+	}
+	[class*="col-"] {
+		padding-left: @gap;
+		padding-right: @gap;
+	}
+	.custom-row {
+		margin: -@gap;
+	}
+	.custom-cell {
+		.pull-left;
+		position: relative;
+		@media @only-xs {
+			width: 100%;
+			.center-block;
+		}
+		@media @from-sm {
+			width: 50%;
+		}
+
+		.ratio-cell {
+			&.big-size {
+				padding-top: @image-big-ratio;
+			}
+			&.small-size {
+				padding-top: @image-small-ratio;
+			}
+
+			.padding-cell {
+				.absolute-wrapper;
+				padding: @gap;
+
+				.image {
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.custom-thumbnail {
+	margin-bottom: 30px;
+	&:hover {
+		.image-cell .image {
+			.scale(1.1);
+		}
+	}
+	.image-cell {
+		overflow: hidden;
+		.image {
+			padding-top: @thumbnail-image-ratio;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			.scale(1);
+			.transition(all @duration-fast);
+		}
+		margin-bottom: 40px;
+	}
+	.text-cell {
+		.text-center;
+		padding-left: 30px;
+		padding-right: 30px;
+
+		h4 {
+			margin-top: 0;
+			margin-bottom: 15px;
+			font-weight: 700;
+		}
+	}
+}
+
+.feature-text {
+	.h4;
+	margin-top: 0;
+	font-weight: normal;
+	line-height: 30px;
+
+}
+
+.feature-heading {
+	.text-uppercase;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+.feature-list {
+	padding-left: 0;
+	li {
+		&:before {
+			content: '- ';
+		}
+		margin-left: 0;
+		list-style: none;
+	}
+}
+
+
+.color-red {
+	color: @color-red;
+}
+

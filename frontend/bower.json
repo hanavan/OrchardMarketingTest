@@ -1,0 +1,16 @@
+{
+  "name": "orchard",
+  "authors": [
+    "Andy Chin <andy@flexdigital.com.au>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "3.3.6",
+    "magnific-popup": "^1.1.0"
+  }
+}
