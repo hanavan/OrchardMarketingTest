@@ -25,10 +25,15 @@ body {
 }
 
 .module-title {
+	margin-top: 25px;
+	margin-bottom: 40px;
+	&.margin-bottom-small {
+		margin-bottom: 30px;
+	}
+
 	h3 {
 		margin-top: 0;
-		margin-bottom: 40px;
-		padding-top: 25px;
+		margin-bottom: 0;
 		padding-bottom: 25px;
 		font-size: 26px;
 		line-height: 34px;
@@ -37,11 +42,6 @@ body {
 		.text-uppercase;
 		display: inline-block;
 		border-bottom: 1px solid @color-white;
-	}
-	&.no-margin-top {
-		h3 {
-			padding-top: 0;
-		}
 	}
 }
 
@@ -147,6 +147,7 @@ body {
 			content: '- ';
 		}
 		margin-left: 0;
+		margin-bottom: 0;
 		list-style: none;
 	}
 }
@@ -159,5 +160,11 @@ body {
 
 .color-red {
 	color: @color-red;
+}
+
+.margin-bottom-xs {
+	@media @only-xs {
+		margin-bottom: 30px;
+	}
 }
 
